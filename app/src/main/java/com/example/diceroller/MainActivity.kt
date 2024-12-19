@@ -55,8 +55,9 @@ fun AllDice(modifier: Modifier = Modifier) {
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = modifier
-            .background(Color.Black)
+            .background(Color.White)
             .border(2.dp, Color.White)
+            .fillMaxSize()
     ) {
         Spacer(modifier = Modifier.height(50.dp))
         DiceRoller(modifier.align(alignment = Alignment.CenterHorizontally))
@@ -67,11 +68,11 @@ fun AllDice(modifier: Modifier = Modifier) {
 @Composable
 fun rollAD4(result: Int): Int {
     return when (result) {
-        1 -> R.drawable.d4_4
-        2 -> R.drawable.d4_2
-        3 -> R.drawable.d4_3
-        4 -> R.drawable.d4_4
-        else -> R.drawable.d4_1
+        1 -> R.drawable.d10_1
+        2 -> R.drawable.d10_2
+        3 -> R.drawable.d10_3
+        4 -> R.drawable.d10_4
+        else -> R.drawable.d10_1
     }
 }
 
@@ -106,36 +107,36 @@ fun rollAD8(result: Int): Int {
 @Composable
 fun rollAD10(result: Int): Int {
     return when (result) {
-        1 -> R.drawable.d6_1
-        2 -> R.drawable.d6_2
-        3 -> R.drawable.d6_3
-        4 -> R.drawable.d6_4
-        5 -> R.drawable.d6_5
-        6 -> R.drawable.d6_6
-        7 -> R.drawable.d6_6
-        8 -> R.drawable.d6_6
-        9 -> R.drawable.d6_6
-        10 -> R.drawable.d6_6
-        else -> R.drawable.d6_1
+        1 -> R.drawable.d10_1
+        2 -> R.drawable.d10_2
+        3 -> R.drawable.d10_3
+        4 -> R.drawable.d10_4
+        5 -> R.drawable.d10_5
+        6 -> R.drawable.d10_6
+        7 -> R.drawable.d10_7
+        8 -> R.drawable.d10_8
+        9 -> R.drawable.d10_9
+        10 -> R.drawable.d10_10
+        else -> R.drawable.d10_1
     }
 }
 
 @Composable
 fun rollAD12(result: Int): Int {
     return when (result) {
-        1 -> R.drawable.d6_1
-        2 -> R.drawable.d6_2
-        3 -> R.drawable.d6_3
-        4 -> R.drawable.d6_4
-        5 -> R.drawable.d6_5
-        6 -> R.drawable.d6_6
-        7 -> R.drawable.d6_6
-        8 -> R.drawable.d6_6
-        9 -> R.drawable.d6_6
-        10 -> R.drawable.d6_6
-        11 -> R.drawable.d6_6
-        12 -> R.drawable.d6_6
-        else -> R.drawable.d6_1
+        1 -> R.drawable.d12_1
+        2 -> R.drawable.d12_2
+        3 -> R.drawable.d12_3
+        4 -> R.drawable.d12_4
+        5 -> R.drawable.d12_5
+        6 -> R.drawable.d12_6
+        7 -> R.drawable.d12_7
+        8 -> R.drawable.d12_8
+        9 -> R.drawable.d12_9
+        10 -> R.drawable.d12_10
+        11 -> R.drawable.d12_11
+        12 -> R.drawable.d12_12
+        else -> R.drawable.d12_1
     }
 }
 
@@ -200,7 +201,7 @@ fun DiceRoller(modifier: Modifier) {
                     .height(80.dp),
                 alignment = Alignment.Center
             )
-            Text(text = "$D4Sum", color = Color.White)
+            Text(text = "$D4Sum", color = Color.Blue)
             Button(onClick = { rollD4 = (1..4).random(); totalSum += rollD4; D4Sum = rollD4 }) {
                 Text(stringResource(R.string.Roll))
             }
@@ -214,7 +215,7 @@ fun DiceRoller(modifier: Modifier) {
                     .height(80.dp),
                 alignment = Alignment.Center
             )
-            Text(text = "$D6Sum", color = Color.White)
+            Text(text = "$D6Sum", color = Color.Blue)
             Button(onClick = { rollD6 = (1..6).random(); totalSum += rollD6; D6Sum = rollD6 }) {
                 Text(stringResource(R.string.Roll))
             }
@@ -228,7 +229,7 @@ fun DiceRoller(modifier: Modifier) {
                     .height(80.dp),
                 alignment = Alignment.Center
             )
-            Text(text = "$D8Sum", color = Color.White)
+            Text(text = "$D8Sum", color = Color.Blue)
             Button(onClick = { rollD8 = (1..8).random(); totalSum += rollD8; D8Sum = rollD8 }) {
                 Text(stringResource(R.string.Roll))
             }
@@ -244,7 +245,7 @@ fun DiceRoller(modifier: Modifier) {
                     .height(80.dp),
                 alignment = Alignment.Center
             )
-            Text(text = "$D10Sum", color = Color.White)
+            Text(text = "$D10Sum", color = Color.Blue)
             Button(onClick = { rollD10 = (1..10).random(); totalSum += rollD10; D10Sum = rollD10 }) {
                 Text(stringResource(R.string.Roll))
             }
@@ -258,7 +259,7 @@ fun DiceRoller(modifier: Modifier) {
                     .height(80.dp),
                 alignment = Alignment.Center
             )
-            Text(text = "$D12Sum", color = Color.White)
+            Text(text = "$D12Sum", color = Color.Blue)
             Button(onClick = { rollD12 = (1..12).random(); totalSum += rollD12; D12Sum = rollD12 }) {
                 Text(stringResource(R.string.Roll))
             }
@@ -272,14 +273,14 @@ fun DiceRoller(modifier: Modifier) {
                     .height(80.dp),
                 alignment = Alignment.Center
             )
-            Text(text = "$D20Sum", color = Color.White)
+            Text(text = "$D20Sum", color = Color.Blue)
             Button(onClick = { rollD20 = (1..20).random(); totalSum += rollD20; D20Sum = rollD20 }) {
                 Text(stringResource(R.string.Roll)) }
         }
     }
 
     Row(verticalAlignment = Alignment.CenterVertically) {
-        Text(text = "Total = $totalSum", color = Color.White)
+        Text(text = "Total = $totalSum", color = Color.Blue)
         Spacer(modifier = Modifier.width(30.dp))
         Button(onClick = { totalSum = 0 }) {
             Text(stringResource(R.string.Clear))
