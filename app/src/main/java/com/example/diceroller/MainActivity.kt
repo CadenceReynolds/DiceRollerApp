@@ -68,11 +68,11 @@ fun AllDice(modifier: Modifier = Modifier) {
 @Composable
 fun rollAD4(result: Int): Int {
     return when (result) {
-        1 -> R.drawable.d10_1
-        2 -> R.drawable.d10_2
-        3 -> R.drawable.d10_3
-        4 -> R.drawable.d10_4
-        else -> R.drawable.d10_1
+        1 -> R.drawable.d20_1
+        2 -> R.drawable.d20_2
+        3 -> R.drawable.d20_3
+        4 -> R.drawable.d20_4
+        else -> R.drawable.d20_1
     }
 }
 
@@ -92,15 +92,15 @@ fun rollAD6(result: Int): Int {
 @Composable
 fun rollAD8(result: Int): Int {
     return when (result) {
-        1 -> R.drawable.d6_1
-        2 -> R.drawable.d6_2
-        3 -> R.drawable.d6_3
-        4 -> R.drawable.d6_4
-        5 -> R.drawable.d6_5
-        6 -> R.drawable.d6_6
-        7 -> R.drawable.d6_6
-        8 -> R.drawable.d6_6
-        else -> R.drawable.d6_1
+        1 -> R.drawable.d20_1
+        2 -> R.drawable.d20_2
+        3 -> R.drawable.d20_3
+        4 -> R.drawable.d20_4
+        5 -> R.drawable.d20_5
+        6 -> R.drawable.d20_6
+        7 -> R.drawable.d20_7
+        8 -> R.drawable.d20_8
+        else -> R.drawable.d20_1
     }
 }
 
@@ -143,27 +143,27 @@ fun rollAD12(result: Int): Int {
 @Composable
 fun rollAD20(result: Int): Int {
     return when (result) {
-        1 -> R.drawable.d6_1
-        2 -> R.drawable.d6_2
-        3 -> R.drawable.d6_3
-        4 -> R.drawable.d6_4
-        5 -> R.drawable.d6_5
-        6 -> R.drawable.d6_6
-        7 -> R.drawable.d6_6
-        8 -> R.drawable.d6_6
-        9 -> R.drawable.d6_6
-        10 -> R.drawable.d6_6
-        11 -> R.drawable.d6_6
-        12 -> R.drawable.d6_6
-        13 -> R.drawable.d6_6
-        14 -> R.drawable.d6_6
-        15 -> R.drawable.d6_6
-        16 -> R.drawable.d6_6
-        17 -> R.drawable.d6_6
-        18 -> R.drawable.d6_6
-        19 -> R.drawable.d6_6
-        20 -> R.drawable.d6_6
-        else -> R.drawable.d6_1
+        1 -> R.drawable.d20_1
+        2 -> R.drawable.d20_2
+        3 -> R.drawable.d20_3
+        4 -> R.drawable.d20_4
+        5 -> R.drawable.d20_5
+        6 -> R.drawable.d20_6
+        7 -> R.drawable.d20_7
+        8 -> R.drawable.d20_8
+        9 -> R.drawable.d20_9
+        10 -> R.drawable.d20_10
+        11 -> R.drawable.d20_11
+        12 -> R.drawable.d20_12
+        13 -> R.drawable.d20_13
+        14 -> R.drawable.d20_14
+        15 -> R.drawable.d20_15
+        16 -> R.drawable.d20_16
+        17 -> R.drawable.d20_17
+        18 -> R.drawable.d20_18
+        19 -> R.drawable.d20_19
+        20 -> R.drawable.d20_20
+        else -> R.drawable.d20_1
     }
 }
 
